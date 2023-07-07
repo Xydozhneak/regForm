@@ -15,10 +15,10 @@ const divForTable = document.createElement("div");
 const cities = ["Odesa", "Lviv", "Harkiv", "Kyiv"];
 
 cities.forEach(element => {
-   const yourCity = document.createElement("option");
-   yourCity.value = element;
-   yourCity.textContent = element;
-   city.appendChild(yourCity);
+  const yourCity = document.createElement("option");
+  yourCity.value = element;
+  yourCity.textContent = element;
+  city.appendChild(yourCity);
 });
 
 const regData = {
@@ -38,28 +38,26 @@ const regData = {
 function renderTable(obj) {
   regForm.classList.add("hide");
   const table = document.createElement('table');
-  
+
   for (let key in obj) {
-    if (Object.prototype.hasOwnProperty.call(obj, key)) {
-      const tr = document.createElement('tr');
-      const td1 = document.createElement('td');
-      const td2 = document.createElement('td');
+    const tr = document.createElement('tr');
+    const td1 = document.createElement('td');
+    const td2 = document.createElement('td');
 
-      td1.textContent = key + ":";
-      
-      if (key === "languages") {
-        const languages = Object.keys(obj[key]).filter(lang => obj[key][lang]);
-        td2.textContent = languages.join(", ");
-      } else {
-        td2.textContent = obj[key];
-      }
+    td1.textContent = key + ":";
 
-      tr.appendChild(td1);
-      tr.appendChild(td2);
-      table.appendChild(tr);
+    if (key === "languages") {
+      const languages = Object.keys(obj[key]).filter(lang => obj[key][lang]);
+      td2.textContent = languages.join(", ");
+    } else {
+      td2.textContent = obj[key];
     }
+
+    tr.appendChild(td1);
+    tr.appendChild(td2);
+    table.appendChild(tr);
   }
-  
+
   document.body.appendChild(table);
 }
 
