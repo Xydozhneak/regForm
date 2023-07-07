@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+        }
+        .hide{
+            display: none;
+        }
+        td{
+            border: 1px solid black;
+        }
+        table{
+            border: 1px solid black;
+        }
+
+        form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 1px solid green;
+            background-color: rgb(192, 186, 179);
+            border-radius: 10px;
+            width: 500px;
+            padding: 30px;
+      
+        }
+        form input{
+            border-radius: 10px;
+            height: 30px;
+            width: 70%;
+        }
+        button{
+            border-radius: 10px;
+            width: 200px;
+            height: 50px;
+            background-color: green;
+            color: bisque;
+        }
+    </style>
+    <form>
+        <label for="first-name">Ім'я:</label>
+        <input type="text" id="first-name" name="first-name"><br>
+      
+        <label for="last-name">Прізвище:</label>
+        <input type="text" id="last-name" name="last-name"><br>
+      
+        <label for="birthdate">Дата народження:</label>
+        <input type="text" id="birthdate" name="birthdate"><br>
+      
+        <label>Стать:</label>
+        <input type="radio" id="gender-male" name="gender" value="male">
+        <label for="gender-male">Чоловіча</label>
+        <input type="radio" id="gender-female" name="gender" value="female">
+        <label for="gender-female">Жіноча</label><br>
+      
+        <label for="city">Місто:</label>
+        <select id="city" name="city">
+        </select><br>
+      
+        <label for="address">Адреса:</label><br>
+        <textarea id="address" name="address" rows="4" cols="50"></textarea><br>
+      
+        <label>Мови, якими володієте:</label><br>
+        <input type="checkbox" id="lang-ukr" name="language" value="ukr">
+        <label for="lang-ukr">Українська</label><br>
+        <input type="checkbox" id="lang-eng" name="language" value="eng">
+        <label for="lang-eng">Англійська</label><br>
+        <input type="checkbox" id="lang-itl" name="language" value="itl">
+        <label for="lang-itl">Італійська</label><br>
+      
+        <button type="submit" id="submit">Зберегти</button>
+      </form>
+    <script src="main.js"></script>
+</body>
+</html>
